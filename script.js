@@ -77,16 +77,35 @@ if (lightbox && lightboxImg) {
         lightbox.classList.remove('active');
     });
 }
+// Video Modal Variables (Restored)
+const videoModal = document.getElementById('video-modal');
+const youtubeFrame = document.getElementById('youtube-frame');
 const videoUrl = "https://www.youtube.com/embed/mregw138N68?autoplay=1";
 
 function openVideoModal() {
-    videoModal.style.display = 'flex';
-    youtubeFrame.src = videoUrl;
+    if (videoModal && youtubeFrame) {
+        videoModal.style.display = 'flex';
+        youtubeFrame.src = videoUrl;
+    }
 }
 
 function closeVideoModal() {
-    videoModal.style.display = 'none';
-    youtubeFrame.src = ""; // Stop video
+    if (videoModal && youtubeFrame) {
+        videoModal.style.display = 'none';
+        youtubeFrame.src = ""; // Stop video
+    }
+}
+
+// Scroll to Demo Section and Auto-Play
+function scrollToDemo() {
+    const demoSection = document.getElementById('demo');
+    if (demoSection) {
+        demoSection.scrollIntoView({ behavior: 'smooth' });
+        // Optional: Auto-play the inline video after scrolling
+        setTimeout(() => {
+            playInlineDemo();
+        }, 1000);
+    }
 }
 
 // Close on outside click for video
