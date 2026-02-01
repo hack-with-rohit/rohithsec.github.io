@@ -1,155 +1,3 @@
-// --- PARTICLE NETWORK SYSTEM ---
-const canvas = document.getElementById('neural-canvas');
-const ctx = canvas.getContext('2d');
-
-let width, height;
-let particles = [];
-const mouse = { x: null, y: null };
-
-function resize() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-    createParticles();
-}
-
-class Particle {
-    constructor() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.vx = (Math.random() - 0.5) * 0.5;
-        this.vy = (Math.random() - 0.5) * 0.5;
-        this.size = Math.random() * 1.5 + 1;
-        this.color = `rgba(0, 243, 255, ${Math.random() * 0.5 + 0.1})`; // Neon Blue
-    }
-
-    update() {
-        this.x += this.vx;
-        this.y += this.vy;
-
-        if (this.x < 0 || this.x > width) this.vx *= -1;
-        if (this.y < 0 || this.y > height) this.vy *= -1;
-    }
-
-    draw() {
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-    }
-}
-
-function createParticles() {
-    particles = [];
-    const count = Math.floor((width * height) / 12000); // Density
-    for (let i = 0; i < count; i++) {
-        particles.push(new Particle());
-    }
-}
-
-function animateParticles() {
-    ctx.clearRect(0, 0, width, height);
-
-    particles.forEach(p => {
-        p.update();
-        p.draw();
-
-        // Connect particles
-        particles.forEach(p2 => {
-            const dx = p.x - p2.x;
-            const dy = p.y - p2.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-
-            if (dist < 100) {
-                ctx.strokeStyle = `rgba(0, 243, 255, ${0.1 * (1 - dist / 100)})`;
-                ctx.lineWidth = 0.5;
-                ctx.beginPath();
-                ctx.moveTo(p.x, p.y);
-                ctx.lineTo(p2.x, p2.y);
-                ctx.stroke();
-            }
-        });
-
-        // Connect to Mouse
-        if (mouse.x) {
-            const dx = p.x - mouse.x;
-            const dy = p.y - mouse.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-
-            if (dist < 150) {
-                ctx.strokeStyle = `rgba(189, 0, 255, ${0.2 * (1 - dist / 150)})`; // Neon Purple connection
-                ctx.lineWidth = 0.8;
-                ctx.beginPath();
-                ctx.moveTo(p.x, p.y);
-                ctx.lineTo(mouse.x, mouse.y);
-                ctx.stroke();
-            }
-        }
-    });
-
-    requestAnimationFrame(animateParticles);
-}
-
-window.addEventListener('resize', resize);
-window.addEventListener('mousemove', e => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-});
-
-// Initialize Particles
-resize();
-animateParticles();
-
-
-// --- LIVE TERMINAL WIDGET ---
-const terminalOutput = document.getElementById('terminal-output');
-const commands = [
-    { text: "target_lock --host=secure.corp.net", type: "cmd" },
-    { text: "[*] Resolving DNS... 10.0.4.52 [OK]", type: "info" },
-    { text: "[*] Enumerating subdomains via PassiveTotal...", type: "info" },
-    { text: "[+] Found: admin.secure.corp.net (200 OK)", type: "success" },
-    { text: "[+] Found: api.secure.corp.net (403 FORBIDDEN)", type: "warn" },
-    { text: "scout --scan-headers", type: "cmd" },
-    { text: "[!] Missing HSTS Header detected", type: "warn" },
-    { text: "[!] CSP Policy allows 'unsafe-inline'", type: "warn" },
-    { text: "vuln_check --module=mta-sts", type: "cmd" },
-    { text: "[*] Analying MTA-STS policy...", type: "info" },
-    { text: "[VULN] MTA-STS Policy Missing / Not Enforced!", type: "success" }, // Red/Green depending on context (Red for vuln found)
-    { text: "gen_report --format=pdf --dest=./reports", type: "cmd" },
-    { text: "[*] Compiling findings...", type: "info" },
-    { text: "[SUCCESS] Report generated: report_290126.pdf", type: "success" }
-];
-
-let cmdIndex = 0;
-
-function typeTerminal() {
-    if (cmdIndex >= commands.length) {
-        cmdIndex = 0; // Loop
-        terminalOutput.innerHTML = '';
-    }
-
-    const cmd = commands[cmdIndex];
-    const div = document.createElement('div');
-    div.className = 'line';
-
-    if (cmd.type === 'cmd') {
-        div.innerHTML = `<span class="prompt">➜</span> <span class="cmd">${cmd.text}</span>`;
-    } else {
-        const colorClass = cmd.type;
-        div.innerHTML = `<span class="${colorClass}">${cmd.text}</span>`;
-    }
-
-    terminalOutput.appendChild(div);
-    terminalOutput.scrollTop = terminalOutput.scrollHeight;
-
-    cmdIndex++;
-
-    // Random Typing Speed
-    const delay = cmd.type === 'cmd' ? 800 : Math.random() * 300 + 100;
-    setTimeout(typeTerminal, delay);
-}
-
-// Start Terminal after 1s
-setTimeout(typeTerminal, 1000);
 
 // Toggle Bio Dossier
 const bioBtn = document.getElementById('toggle-bio-btn');
@@ -172,16 +20,144 @@ function scrambleText(element, finalString) {
     }, 30);
 }
 
-bioBtn.addEventListener('click', () => {
-    if (fullBio.style.display === 'none') {
-        fullBio.style.display = 'block';
-        fullBio.style.animation = 'slideDown 0.5s ease-out';
-        bioBtn.innerHTML = '<i class="fas fa-times"></i> '; // Keep icon
-        scrambleText(bioBtn.appendChild(document.createTextNode("")), " CLOSE SECURE DOSSIER");
-        bioBtn.lastChild.textContent = " CLOSE SECURE DOSSIER"; // Fallback/Fill
-    } else {
-        fullBio.style.display = 'none';
-        bioBtn.innerHTML = '<i class="fas fa-terminal"></i> ';
-        scrambleText(bioBtn.appendChild(document.createTextNode("")), " ACCESS FULL DOSSIER");
+if (bioBtn) {
+    bioBtn.addEventListener('click', () => {
+        if (fullBio.style.display === 'none') {
+            fullBio.style.display = 'block';
+            fullBio.style.animation = 'slideDown 0.5s ease-out';
+            bioBtn.innerHTML = '<i class="fas fa-times"></i> '; // Keep icon
+            scrambleText(bioBtn.appendChild(document.createTextNode("")), " CLOSE SECURE DOSSIER");
+            bioBtn.lastChild.textContent = " CLOSE SECURE DOSSIER"; // Fallback/Fill
+            openTab('tab-bio'); // Default tab
+        } else {
+            fullBio.style.display = 'none';
+            bioBtn.innerHTML = '<i class="fas fa-terminal"></i> ';
+            scrambleText(bioBtn.appendChild(document.createTextNode("")), " ACCESS FULL DOSSIER");
+        }
+    });
+}
+
+// Tab Switching Logic
+function openTab(tabId) {
+    // Hide all tabs
+    document.querySelectorAll('.dossier-tab').forEach(tab => {
+        tab.style.display = 'none';
+        tab.classList.remove('active-tab');
+    });
+
+    // Deactivate all buttons
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    // Show selected tab
+    const tab = document.getElementById(tabId);
+    if (tab) tab.style.display = 'block';
+
+    // Activate clicked button
+    const clickedBtn = Array.from(document.querySelectorAll('.nav-btn')).find(btn => btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId));
+    if (clickedBtn) clickedBtn.classList.add('active');
+}
+
+// Lightbox Logic
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+if (lightbox && lightboxImg) {
+    // Open Lightbox (Event Delegation for dynamic items)
+    document.body.addEventListener('click', (e) => {
+        if (e.target.tagName === 'IMG' && e.target.closest('.gallery-card')) {
+            lightboxImg.src = e.target.src;
+            lightbox.classList.add('active');
+        }
+    });
+
+    // Close Lightbox (Click anywhere)
+    lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
+}
+const videoUrl = "https://www.youtube.com/embed/mregw138N68?autoplay=1";
+
+function openVideoModal() {
+    videoModal.style.display = 'flex';
+    youtubeFrame.src = videoUrl;
+}
+
+function closeVideoModal() {
+    videoModal.style.display = 'none';
+    youtubeFrame.src = ""; // Stop video
+}
+
+// Close on outside click for video
+videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+        closeVideoModal();
     }
 });
+
+// Terminal logic remains for visual effect only
+const terminalOutput = document.getElementById('terminal-output');
+const commands = [
+    { cmd: "init_protocol --silent", output: "[INFO] AI Engine Loaded in 20ms" },
+    { cmd: "scan_target -u target.com", output: "[+] Scanning ports... 22, 80, 443 open" },
+    { cmd: "analyze_vuln --deep", output: "[!] CRITICAL: SQL Injection detected on /login" },
+    { cmd: "exploit_db --search CVE-2024", output: "[*] 3 Payloads generated for auto-deployment" }
+];
+
+let cmdIndex = 0;
+
+function typeLine() {
+    if (cmdIndex >= commands.length) {
+        cmdIndex = 0; // Loop (optional) or stop
+        terminalOutput.innerHTML = '';
+    }
+
+    const command = commands[cmdIndex];
+
+    const cmdLine = document.createElement('div');
+    cmdLine.className = 'line';
+    cmdLine.innerHTML = `<span class="prompt">➜</span> <span class="cmd">${command.cmd}</span>`;
+    terminalOutput.appendChild(cmdLine);
+
+    setTimeout(() => {
+        const outLine = document.createElement('div');
+        outLine.className = 'line info';
+        outLine.innerHTML = command.output;
+        terminalOutput.appendChild(outLine);
+
+        // Auto scroll
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+
+        cmdIndex++;
+        setTimeout(typeLine, 2000);
+    }, 500);
+}
+
+// Start terminal effect
+setTimeout(typeLine, 1000);
+
+// Inline Video Player Logic (Facade Pattern)
+function playInlineDemo() {
+    const playerContainer = document.getElementById('demo-player');
+    // Check if already playing to prevent reload
+    if (playerContainer.querySelector('iframe')) return;
+
+    const videoId = "mregw138N68"; // Your Video ID
+
+    playerContainer.innerHTML = `
+        <iframe width="100%" height="100%" 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+            title="Rohith AI Security Demo" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </iframe>
+    `;
+
+    // Ensure container has aspect ratio respected if needed, 
+    // but the CSS handles the container size (height: 400px usually or aspect ratio).
+    // Let's force full height usage within the flex container.
+}
