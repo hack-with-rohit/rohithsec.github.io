@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payloads | Rohith AI Arsenal</title>
+    <link rel="icon" type="image/png" href="assets/hwr_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Background -->
+    <canvas id="neural-canvas"></canvas>
+    <div class="vignette"></div>
+
+    <header class="glass-header">
+        <a href="index.html" class="logo">
+            <img src="assets/hwr_logo.png" alt="HWR">
+            <span>ROHITH S<span class="highlight">.</span></span>
+        </a>
+        <nav>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="projects.html#project01-open" class="nav-link">MODULES</a>
+            <a href="index.html#demo" class="nav-link">LAB DEMO</a>
+            <a href="https://www.linkedin.com/in/rohith-s-0b9b2b267" target="_blank" class="btn-primary-small">
+                <i class="fab fa-linkedin"></i> CONNECT
+            </a>
+        </nav>
+    </header>
+
+    <main style="padding-top: 100px;">
+
+        <section class="features-section">
+            <h2 class="section-title">PAYLOAD <span class="highlight">ENGINEERING</span></h2>
+            <p
+                style="text-align: center; color: var(--text-secondary); margin-bottom: 50px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Advanced fuzzing vectors and context-aware payloads designed to bypass modern WAFs and filters.
+            </p>
+
+            <div class="grid-container">
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-bug"></i></div>
+                    <h3>XSS Payload</h3>
+                    <p>Advanced polyglot generation for Cross-Site Scripting. Bypasses WAF filters with custom encoding
+                        logic.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-database"></i></div>
+                    <h3>SQLi Payload</h3>
+                    <p>Context-aware SQL injection vectors. Tailored for various DB backends (MySQL, PostgreSQL, etc).
+                    </p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-share"></i></div>
+                    <h3>Open Redirect</h3>
+                    <p>Fuzzing payloads to detect unsafe redirection flaws. Essential for phishing chain simulation.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-file-code"></i></div>
+                    <h3>Swagger</h3>
+                    <p>API documentation fuzzing. Identifies hidden endpoints and parameter vulnerabilities in Swagger
+                        UI.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-bomb"></i></div>
+                    <h3>Titan (DoS)</h3>
+                    <p>Controlled Denial of Service stress testing payloads. Validates rate limiting and resource
+                        handling.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-layer-group"></i></div>
+                    <h3>All Payloads</h3>
+                    <p>Comprehensive payload wordlists aggregating all vector types for massive fuzzing campaigns.</p>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="projects.html#project01-open" class="btn-ghost"><i class="fas fa-arrow-left"></i> BACK TO
+                    ARSENAL</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content" style="text-align: center; margin-bottom: 20px;">
+            <p>&copy; 2026 Rohith. All Systems Operational.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".tilt"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+    </script>
+</body>
+
+</html>

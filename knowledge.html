@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Logic | Rohith AI Arsenal</title>
+    <link rel="icon" type="image/png" href="assets/hwr_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Background -->
+    <canvas id="neural-canvas"></canvas>
+    <div class="vignette"></div>
+
+    <header class="glass-header">
+        <a href="index.html" class="logo">
+            <img src="assets/hwr_logo.png" alt="HWR">
+            <span>ROHITH S<span class="highlight">.</span></span>
+        </a>
+        <nav>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="projects.html#project01-open" class="nav-link">MODULES</a>
+            <a href="index.html#demo" class="nav-link">LAB DEMO</a>
+            <a href="https://www.linkedin.com/in/rohith-s-0b9b2b267" target="_blank" class="btn-primary-small">
+                <i class="fab fa-linkedin"></i> CONNECT
+            </a>
+        </nav>
+    </header>
+
+    <main style="padding-top: 100px;">
+
+        <section class="features-section">
+            <h2 class="section-title">KNOWLEDGE <span class="highlight">CORE</span></h2>
+            <p
+                style="text-align: center; color: var(--text-secondary); margin-bottom: 50px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Integrated intelligence database. Instant access to attack methodologies, cheat sheets, and tool
+                references.
+            </p>
+
+            <div class="grid-container">
+
+                <div class="feature-card glass-panel tilt highlighting" data-tilt>
+                    <div class="icon-box"><i class="fas fa-book-dead"></i></div>
+                    <h3>DB Pentest Notes</h3>
+                    <p>A comprehensive database of pentesting notes, methodologies, and cheat sheets accessable
+                        instantly.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt highlighting" data-tilt>
+                    <div class="icon-box"><i class="fas fa-book"></i></div>
+                    <h3>Full Manual</h3>
+                    <p>Complete usage guide covering every tool and module. Detailed workflows for maximum
+                        efficiency.</p>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="projects.html#project01-open" class="btn-ghost"><i class="fas fa-arrow-left"></i> BACK TO
+                    ARSENAL</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content" style="text-align: center; margin-bottom: 20px;">
+            <p>&copy; 2026 Rohith. All Systems Operational.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".tilt"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+    </script>
+</body>
+
+</html>

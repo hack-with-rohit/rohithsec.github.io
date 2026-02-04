@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Rohith S</title>
+    <link rel="icon" type="image/png" href="assets/hwr_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Background -->
+    <canvas id="neural-canvas"></canvas>
+    <div class="vignette"></div>
+
+    <header class="glass-header">
+        <a href="index.html" class="logo">
+            <img src="assets/hwr_logo.png" alt="HWR">
+            <span>ROHITH S<span class="highlight">.</span></span>
+        </a>
+        <nav>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="#" class="nav-link active">PROJECTS</a>
+            <a href="learning.html" class="nav-link">LEARNING</a>
+            <a href="about.html" class="nav-link">AUTHOR</a>
+            <a href="https://www.linkedin.com/in/rohith-s-0b9b2b267" target="_blank" class="btn-primary-small">
+                <i class="fab fa-linkedin"></i> CONNECT
+            </a>
+        </nav>
+    </header>
+
+    <main style="padding-top: 100px; padding-bottom: 80px;">
+
+        <!-- FEATURES GRID: CATEGORIZED ARSENAL HUB -->
+        <section id="features" class="features-section">
+            <h2 class="section-title">FEATURED <span class="highlight">PROJECTS</span></h2>
+
+            <!-- Project 01 Header -->
+            <!-- Project 01: THE FLAGSHIP -->
+            <div class="project-hud bg-scanline hacker-scroll" style="max-width: 1200px; margin: 0 auto 30px auto;">
+                <div class="hud-header">
+                    <div class="hud-title">
+                        <i class="fas fa-folder-open" style="color: var(--neon-blue);"></i>
+                        PROJECT 01: AI PENTESTING ASSISTANT
+                    </div>
+                    <div class="hud-status">
+                        STATUS: ONLINE
+                    </div>
+                </div>
+
+                <p class="hud-desc">
+                    A comprehensive, automated red teaming suite built to accelerate vulnerability discovery.
+                    Integrates custom payload generation, multi-vector scanning, and intelligent recon bots into a
+                    unified command center.
+                </p>
+
+                <div style="margin-top: 30px;">
+                    <a href="javascript:void(0)" onclick="toggleModules()" id="module-toggle-btn" class="cyber-btn">
+                        <i class="fas fa-terminal"></i> INITIALIZE_CORE_MODULES [4]
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid-container" id="project01-modules" style="display: none; transition: all 0.5s ease;">
+
+                <!-- 1. PAYLOADS LINK -->
+                <a href="payloads.html" style="text-decoration: none;">
+                    <div class="feature-card glass-panel tilt" data-tilt
+                        style="border-left: 4px solid var(--neon-purple); height: 100%;">
+                        <div class="icon-box" style="color: var(--neon-purple);"><i class="fas fa-box-open"></i></div>
+                        <h3>Payload Engineering</h3>
+                        <p>Access the XSS, SQLi, and DoS payload generation modules.</p>
+                        <div
+                            style="margin-top: 20px; color: var(--neon-purple); font-size: 0.9rem; font-family: 'JetBrains Mono';">
+                            <i class="fas fa-terminal"></i> ACCESS_MODULES >>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 2. SCANNERS LINK -->
+                <a href="scanners.html" style="text-decoration: none;">
+                    <div class="feature-card glass-panel tilt" data-tilt
+                        style="border-left: 4px solid var(--neon-blue); height: 100%;">
+                        <div class="icon-box" style="color: var(--neon-blue);"><i class="fas fa-shield-virus"></i></div>
+                        <h3>Vulnerability Scanners</h3>
+                        <p>Launch Email Security, AXFR, SSL Hardening, and 10+ active scans.</p>
+                        <div
+                            style="margin-top: 20px; color: var(--neon-blue); font-size: 0.9rem; font-family: 'JetBrains Mono';">
+                            <i class="fas fa-radar"></i> INITIATE_SCANS >>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 3. AUTOMATION LINK -->
+                <a href="automation.html" style="text-decoration: none;">
+                    <div class="feature-card glass-panel tilt" data-tilt
+                        style="border-left: 4px solid var(--neon-green); height: 100%;">
+                        <div class="icon-box" style="color: var(--neon-green);"><i class="fas fa-robot"></i></div>
+                        <h3>Automation & Recon</h3>
+                        <p>Deploy Wayback Machine, Shodan, and Github Dorking bots.</p>
+                        <div
+                            style="margin-top: 20px; color: var(--neon-green); font-size: 0.9rem; font-family: 'JetBrains Mono';">
+                            <i class="fas fa-search-location"></i> START_RECON >>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 4. KNOWLEDGE LINK -->
+                <a href="knowledge.html" style="text-decoration: none;">
+                    <div class="feature-card glass-panel tilt" data-tilt
+                        style="border-left: 4px solid #fff; height: 100%;">
+                        <div class="icon-box" style="color: #fff;"><i class="fas fa-brain"></i></div>
+                        <h3>Knowledge Core</h3>
+                        <p>Reference the comprehensive Pentest Notes and Tool Usage Manuals.</p>
+                        <div style="margin-top: 20px; color: #fff; font-size: 0.9rem; font-family: 'JetBrains Mono';">
+                            <i class="fas fa-book-reader"></i> READ_DATA >>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- End Project 01 Grid -->
+            </div>
+
+            <!-- PROJECT 02: HACKRECON -->
+            <div class="project-card-secondary hackrecon bg-scanline hacker-scroll"
+                style="max-width: 1200px; margin: 0 auto 30px auto; border-left: 4px solid var(--neon-cyan);">
+                <div style="position: absolute; top: 0; right: 0; padding: 20px; opacity: 0.1; font-size: 4rem;">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="hud-header" style="border-bottom: 1px solid rgba(0, 243, 255, 0.1);">
+                    <div class="hud-title" style="color: var(--neon-cyan);">
+                        <i class="fas fa-terminal"></i> PROJECT 02: HACKRECON
+                    </div>
+                    <div class="hud-status" style="color: var(--neon-cyan); border-color: rgba(0, 243, 255, 0.3);">
+                        v1.2 STABLE
+                    </div>
+                </div>
+                <p style="color: #aaa; margin: 15px 0; max-width: 900px; line-height: 1.6;">
+                    A fully automated Python-based reconnaissance framework. Integrates <strong>Subfinder, Httpx,
+                        Nuclei,
+                        and Naabu</strong> into a seamless pipeline. Features AXFR zone transfer scanning, automated
+                    vulnerability filtering (XSS, SQLi, LFI), and smart subdomain takeover detection.
+                </p>
+                <div class="vuln-tags" style="margin-top: 20px;">
+                    <span class="tag-red"
+                        style="color: var(--neon-cyan); border-color: var(--neon-cyan); background: rgba(0,243,255,0.05);"><i
+                            class="fab fa-python"></i> Python 3</span>
+                    <span class="tag-red"
+                        style="color: var(--neon-cyan); border-color: var(--neon-cyan); background: rgba(0,243,255,0.05);">Automation</span>
+                    <span class="tag-red"
+                        style="color: var(--neon-cyan); border-color: var(--neon-cyan); background: rgba(0,243,255,0.05);">Bug
+                        Bounty</span>
+                    <span class="tag-red"
+                        style="color: var(--neon-cyan); border-color: var(--neon-cyan); background: rgba(0,243,255,0.05);">Recon</span>
+                </div>
+            </div>
+
+            <!-- PROJECT 03: SENSITIVE OPS SUITE -->
+            <div class="project-card-secondary sensitive bg-scanline hacker-scroll"
+                style="max-width: 1200px; margin: 0 auto 30px auto; border-left: 4px solid var(--neon-red);">
+                <div style="position: absolute; top: 0; right: 0; padding: 20px; opacity: 0.1; font-size: 4rem;">
+                    <i class="fas fa-file-code"></i>
+                </div>
+                <div class="hud-header" style="border-bottom: 1px solid rgba(255, 0, 50, 0.1);">
+                    <div class="hud-title" style="color: var(--neon-red);">
+                        <i class="fas fa-search"></i> PROJECT 03: SENSITIVE DATA SUITE
+                    </div>
+                    <div class="hud-status" style="color: var(--neon-red); border-color: rgba(255, 0, 50, 0.3);">
+                        <span style="background: var(--neon-red); box-shadow: 0 0 8px var(--neon-red);"
+                            class="hud-status-dot"></span> OPERATIONAL
+                    </div>
+                </div>
+                <p style="color: #aaa; margin: 15px 0; max-width: 900px; line-height: 1.6;">
+                    An advanced Bash-based intelligence gathering suite including <strong>Sensitive File Finder</strong>
+                    and <strong>JS Juicy</strong>. Automatically extracts and categorizes sensitive assets (Config
+                    files,
+                    API keys, Secrets) using Katana and custom regex patterns.
+                </p>
+                <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+                    <span class="tag-red">Bash Scripting</span>
+                    <span class="tag-red">Intel Gathering</span>
+                    <span class="tag-red">JS Analysis</span>
+                </div>
+            </div>
+
+            <!-- Toggle Script -->
+            <script>
+                function toggleModules() {
+                    const modulesGrid = document.getElementById('project01-modules');
+                    const btn = document.getElementById('module-toggle-btn');
+
+                    if (modulesGrid.style.display === 'none') {
+                        modulesGrid.style.display = 'grid'; // Restore grid layout
+                        btn.innerHTML = '<i class="fas fa-check-circle"></i> > SYSTEM_MODULES_ACTIVE [-]';
+                        btn.style.borderColor = 'var(--neon-green)';
+                        btn.style.color = 'var(--neon-green)';
+
+                        // Scroll to the grid smoothly after a slight delay
+                        setTimeout(() => {
+                            modulesGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 100);
+
+                    } else {
+                        modulesGrid.style.display = 'none';
+                        btn.innerHTML = '<i class="fas fa-terminal"></i> > INITIALIZE_CORE_MODULES [4]';
+                        btn.style.borderColor = 'var(--neon-blue)';
+                        btn.style.color = 'var(--neon-blue)';
+                    }
+                }
+
+                // Auto-open if coming back from modules
+                window.addEventListener('DOMContentLoaded', (event) => {
+                    if (window.location.hash === '#project01-open') {
+                        toggleModules();
+                    }
+                });
+            </script>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content" style="text-align: center; margin-bottom: 20px;">
+            <p>&copy; 2026 Rohith. All Systems Operational.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</body>
+
+</html>

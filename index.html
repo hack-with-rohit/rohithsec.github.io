@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohith S | Offensive Security Engineer</title>
+    <link rel="icon" type="image/png" href="assets/hwr_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Background -->
+    <canvas id="neural-canvas"></canvas>
+    <div class="vignette"></div>
+
+    <header class="glass-header">
+        <a href="index.html" class="logo">
+            <img src="assets/hwr_logo.png" alt="HWR">
+            <span>ROHITH S<span class="highlight">.</span></span>
+        </a>
+        <nav>
+            <a href="#" class="nav-link active">HOME</a>
+            <a href="projects.html" class="nav-link">PROJECTS</a>
+            <a href="learning.html" class="nav-link">LEARNING</a>
+            <a href="about.html" class="nav-link">AUTHOR</a>
+            <a href="https://www.linkedin.com/in/rohith-s-0b9b2b267" target="_blank" class="btn-primary-small">
+                <i class="fab fa-linkedin"></i> CONNECT
+            </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="status-tag pulse-cyan">
+                    <i class="fas fa-circle"></i> AVAILABLE FOR HIRE
+                </div>
+                <h1 class="glitch-title" data-text="ROHITH S">
+                    ROHITH S <br> <span class="text-gradient">OFFENSIVE SECURITY</span> <br> ENGINEER.
+                </h1>
+                <p class="hero-sub">
+                    Building next-gen automated security tools and securing global infrastructure.
+                    Specializing in Red Teaming, Tool Development, and Bug Bounties.
+                </p>
+                <div class="cta-row">
+                    <a href="projects.html" class="btn-hero">
+                        <i class="fas fa-code-branch"></i> VIEW PROJECTS
+                    </a>
+                </div>
+            </div>
+
+            <!-- LIVE TERMINAL WIDGET -->
+            <div class="terminal-widget glass-panel">
+                <div class="terminal-header">
+                    <div class="dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="title">root@rohith:~</div>
+                </div>
+                <div class="terminal-body" id="terminal-output">
+                    <!-- JS will populate this -->
+                    <div class="line"><span class="prompt">➜</span> <span class="cmd">init_protocol --silent</span>
+                    </div>
+                    <div class="line info">[INFO] AI Engine Loaded in 20ms</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FREELANCE OPERATIONS (New Section) -->
+        <section class="freelance-section">
+            <div class="freelance-header">
+                <h2 class="section-title">FREELANCE <span class="highlight"
+                        style="color: var(--neon-green); text-shadow: 0 0 15px var(--neon-green);">OPERATIONS</span>
+                </h2>
+                <div class="cyber-ticker-container">
+                    <div class="cyber-ticker-track">
+                        <span>// HIGH IMPACT //</span>
+                        <span class="highlight-green">COST EFFECTIVE</span>
+                        <span>// RAPID RESULTS //</span>
+                        <span class="highlight-green">MAXIMUM SECURITY</span>
+                        <span>// HIGH IMPACT //</span>
+                        <span class="highlight-green">COST EFFECTIVE</span>
+                        <span>// RAPID RESULTS //</span>
+                        <span class="highlight-green">MAXIMUM SECURITY</span>
+                    </div>
+                </div>
+                <div class="freelance-stats">
+                    <div class="stat-box"><i class="fas fa-check-circle"></i> 3 OPS COMPLETED</div>
+                    <div class="stat-box"><i class="fas fa-star"></i> 5.0 RATING</div>
+                    <div class="stat-box"><i class="fas fa-shield-alt"></i> 100% SECURED</div>
+                </div>
+            </div>
+
+            <div class="classified-grid">
+                <!-- Case 1: Shopping Website -->
+                <div class="classified-card">
+                    <div class="classified-thumb">
+                        <img src="assets/freelance/client_1.jpg" alt="Classified Target">
+                    </div>
+                    <div class="classified-info">
+                        <h3>E-Commerce Giant <span class="client-type">Shopping</span></h3>
+                        <p>Identified a critical <strong>Zero-Click Account Takeover</strong> vulnerability. Reported
+                            and patched immediately, securing thousands of users.</p>
+                        <div class="vuln-tags">
+                            <span class="tag-red"><i class="fas fa-bug"></i> ZERO-CLICK ATO</span>
+                            <span class="tag-red"><i class="fas fa-check"></i> SECURED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2: Crypto Website -->
+                <div class="classified-card">
+                    <div class="classified-thumb">
+                        <img src="assets/freelance/Screenshot 2026-02-03 001209.png" alt="Classified Target">
+                    </div>
+                    <div class="classified-info">
+                        <h3>Crypto Exchange <span class="client-type">Web3</span></h3>
+                        <p>Found critical <strong>Stored XSS</strong> leading to full Account Takeover. Comprehensive
+                            audit revealed and fixed multiple other vulnerabilities.</p>
+                        <div class="vuln-tags">
+                            <span class="tag-red"><i class="fas fa-code"></i> STORED XSS</span>
+                            <span class="tag-red"><i class="fas fa-user-lock"></i> ATO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3: Company Website -->
+                <div class="classified-card">
+                    <div class="classified-thumb">
+                        <img src="assets/freelance/client_1.jpg" alt="Classified Target">
+                    </div>
+                    <div class="classified-info">
+                        <h3>Corporate Enterprise <span class="client-type">Business</span></h3>
+                        <p>Bypassed authentication via <strong>OTP Bypass</strong> and executed remote code via
+                            <strong>File Upload Bypass</strong>. Full mitigation strategy provided.
+                        </p>
+                        <div class="vuln-tags">
+                            <span class="tag-red"><i class="fas fa-key"></i> OTP BYPASS</span>
+                            <span class="tag-red"><i class="fas fa-file-upload"></i> RCE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content" style="text-align: center; margin-bottom: 20px;">
+            <p style="margin-bottom: 20px; font-size: 1rem; color: #fff; letter-spacing: 1px;">
+                <span style="color: var(--neon-cyan);">[</span> CONNECT PROTOCOLS ESTABLISHED <span
+                    style="color: var(--neon-cyan);">]</span>
+            </p>
+            <div class="social-links" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/rohith-s-0b9b2b267" target="_blank" class="social-btn"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="btn-glitch"></span>
+                </a>
+                <!-- YouTube -->
+                <a href="https://youtube.com/@hackwithrohit2k" target="_blank" class="social-btn" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                    <span class="btn-glitch"></span>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/hack-with-rohit" target="_blank" class="social-btn" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span class="btn-glitch"></span>
+                </a>
+                <!-- Telegram -->
+                <a href="https://t.me/hackwithrohit" target="_blank" class="social-btn" aria-label="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                    <span class="btn-glitch"></span>
+                </a>
+                <!-- Email (New Button) -->
+                <a href="mailto:contact@rohithsec.com" class="social-btn" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                    <span class="btn-glitch"></span>
+                </a>
+            </div>
+        </div>
+        <p>&copy; 2026 Rohith. All Systems Operational.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
