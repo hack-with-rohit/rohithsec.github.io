@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanners | Rohith AI Arsenal</title>
+    <link rel="icon" type="image/png" href="assets/profile_logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Background -->
+    <canvas id="neural-canvas"></canvas>
+    <div class="vignette"></div>
+
+    <header class="glass-header">
+        <a href="index.html" class="logo">
+            <img src="assets/profile_logo.jpg" class="profile-logo" alt="HWR">
+            <span>ROHITH S<span class="highlight">.</span></span>
+        </a>
+        <nav>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="projects.html" class="nav-link">PROJECTS</a>
+            <a href="learning.html" class="nav-link">LEARNING</a>
+            <a href="about.html" class="nav-link" id="nav-author">AUTHOR</a>
+            <a href="https://www.linkedin.com/in/rohith-s-0b9b2b267" target="_blank" class="btn-primary-small">
+                <i class="fab fa-linkedin"></i> CONNECT
+            </a>
+        </nav>
+    </header>
+
+    <main style="padding-top: 100px;">
+
+        <section class="features-section">
+            <h2 class="section-title">VULNERABILITY <span class="highlight">SCANNERS</span></h2>
+            <p
+                style="text-align: center; color: var(--text-secondary); margin-bottom: 50px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Automated detection modules for critical security flaws, from DNS misconfigurations to advanced XSS.
+            </p>
+
+            <div class="grid-container">
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-envelope-open-text"></i></div>
+                    <h3>Email Security</h3>
+                    <p>Automated SPF, DKIM, and DMARC record validation. Prevents spoofing and phishing risks.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-server"></i></div>
+                    <h3>MTA-STS Check</h3>
+                    <p>Verifies Mail Transfer Agent Strict Transport Security policies to prevent downgrade attacks.
+                    </p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-globe"></i></div>
+                    <h3>Zone Transfer (AXFR)</h3>
+                    <p>Tests for misconfigured DNS servers allowing full zone dumps. Critical for uncovering hidden
+                        infrastructure.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-mouse-pointer"></i></div>
+                    <h3>Clickjack Test</h3>
+                    <p>Checks for X-Frame-Options headers. Validates if your site can be framed by malicious actors.
+                    </p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-search-plus"></i></div>
+                    <h3>Leak Hunter</h3>
+                    <p>"Find Something" module searches for sensitive data leaks, secrets, and accidental exposures.
+                    </p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Security Headers</h3>
+                    <p>Deep audit of HSTS, CSP, and X-Content-Type-Options. Ensure hardening standards are met.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-exchange-alt"></i></div>
+                    <h3>CORS Config</h3>
+                    <p>Scans for Cross-Origin Resource Sharing misconfigurations leading to data theft.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-stream"></i></div>
+                    <h3>CRLF Injection</h3>
+                    <p>Response splitting attacks via CRLF header injection. Detects potential cache poisoning
+                        vectors.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-lock"></i></div>
+                    <h3>SSL Hardening</h3>
+                    <p>Integrated <strong>testssl.sh</strong> wrapper. Checks for weak ciphers, heartbleed, and
+                        protocol flaws.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-code-branch"></i></div>
+                    <h3>XSS Scanner (Adv)</h3>
+                    <p>Advanced XSS scanning module for reflected and stored vectors with low false-positive rates.
+                    </p>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="projects.html#project01-open" class="btn-ghost"><i class="fas fa-arrow-left"></i> BACK TO
+                    ARSENAL</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content" style="text-align: center; margin-bottom: 20px;">
+            <p>&copy; 2026 Rohith. All Systems Operational.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".tilt"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation | Rohith AI Arsenal</title>
+    <link rel="icon" type="image/png" href="assets/profile_logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Background -->
+    <canvas id="neural-canvas"></canvas>
+    <div class="vignette"></div>
+
+    <header class="glass-header">
+        <a href="index.html" class="logo">
+            <img src="assets/profile_logo.jpg" class="profile-logo" alt="HWR">
+            <span>ROHITH S<span class="highlight">.</span></span>
+        </a>
+        <nav>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="projects.html" class="nav-link">PROJECTS</a>
+            <a href="learning.html" class="nav-link">LEARNING</a>
+            <a href="about.html" class="nav-link" id="nav-author">AUTHOR</a>
+            <a href="https://www.linkedin.com/in/rohith-s-0b9b2b267" target="_blank" class="btn-primary-small">
+                <i class="fab fa-linkedin"></i> CONNECT
+            </a>
+        </nav>
+    </header>
+
+    <main style="padding-top: 100px;">
+
+        <section class="features-section">
+            <h2 class="section-title">AUTOMATION & <span class="highlight">RECON</span></h2>
+            <p
+                style="text-align: center; color: var(--text-secondary); margin-bottom: 50px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Force-multiplying tools for OSINT gathering, automated browser testing, and infrastructure mapping.
+            </p>
+
+            <div class="grid-container">
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-cookie-bite"></i></div>
+                    <h3>Cookie Security</h3>
+                    <p>Automated checker for missing <code>HttpOnly</code>, <code>Secure</code> flags and
+                        Cache-Control headers.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-user-clock"></i></div>
+                    <h3>Session Invalidation</h3>
+                    <p>Verifies proper session termination on logout. Essential for preventing session replay
+                        attacks.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-history"></i></div>
+                    <h3>Wayback Machine</h3>
+                    <p>Mining archived possibilities. Retrieves historical URLs to find forgotten endpoints and
+                        parameters.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fas fa-eye"></i></div>
+                    <h3>Shodan Recon</h3>
+                    <p>External infrastructure scanning. Identifies open ports and services without sending a single
+                        packet.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fab fa-github"></i></div>
+                    <h3>Github Chicken</h3>
+                    <p>Automated dorking tool. Scans repositories for exposed API keys, credentials, and sensitive
+                        code.</p>
+                </div>
+
+                <div class="feature-card glass-panel tilt" data-tilt>
+                    <div class="icon-box"><i class="fab fa-google"></i></div>
+                    <h3>Google API Leaks</h3>
+                    <p>Detects exposed Google API keys and validates their permissions and usage limits.</p>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="projects.html#project01-open" class="btn-ghost"><i class="fas fa-arrow-left"></i> BACK TO
+                    ARSENAL</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content" style="text-align: center; margin-bottom: 20px;">
+            <p>&copy; 2026 Rohith. All Systems Operational.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".tilt"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+    </script>
+</body>
+
+</html>
