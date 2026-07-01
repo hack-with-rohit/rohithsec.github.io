@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rohith S — Offensive Security Engineer | VAPT Specialist | Red Teamer | Bug Bounty Hunter" />
+  <title>Rohith S | Offensive Security Engineer</title>
+  
+  <!-- Premium Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Easing Cursor Follower -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Gallery Exhibition HUD Overlay -->
+  <div class="hud-overlay">
+    <div class="hud-corner top-left">
+      <span class="hud-tag">EXHIBIT_REF // ARCHIVE.09</span>
+      <span class="hud-label">SCULPTURE: ORGANIC_MORPH</span>
+    </div>
+    <div class="hud-corner top-right">
+      <span class="hud-tag">LUMINANCE_FLOW</span>
+      <span class="hud-label" id="hud-camera-coords">CAM_X: 0.00 | CAM_Y: 0.00</span>
+    </div>
+    <div class="hud-corner bottom-left">
+      <span class="hud-tag">SYSTEM_INTEGRATION</span>
+      <span class="hud-label" id="hud-status">STATUS // READY</span>
+    </div>
+    <div class="hud-corner bottom-right">
+      <span class="hud-tag">RENDER_TIME</span>
+      <span class="hud-label" id="hud-timer">0.000s</span>
+    </div>
+  </div>
+
+  <!-- WebGL Render Target Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Left Side Slide Indicators -->
+  <div id="gallery-navigation">
+    <div class="nav-dot active" data-slide="0"><span class="dot-num">01</span><span class="dot-label">HERO</span></div>
+    <div class="nav-dot" data-slide="1"><span class="dot-num">02</span><span class="dot-label">ABOUT</span></div>
+    <div class="nav-dot" data-slide="2"><span class="dot-num">03</span><span class="dot-label">SKILLS</span></div>
+    <div class="nav-dot" data-slide="3"><span class="dot-num">04</span><span class="dot-label">PROJECTS</span></div>
+    <div class="nav-dot" data-slide="4"><span class="dot-num">05</span><span class="dot-label">FREELANCE</span></div>
+    <div class="nav-dot" data-slide="5"><span class="dot-num">06</span><span class="dot-label">LOGS</span></div>
+    <div class="nav-dot" data-slide="6"><span class="dot-num">07</span><span class="dot-label">CONTACT</span></div>
+  </div>
+
+  <!-- Master Scrollytelling Container -->
+  <main id="scrolly-container">
+
+    <!-- SLIDE 0: HERO (Bioluminescent Sculptures Intro) -->
+    <section class="slide active-slide" id="slide-hero" data-index="0">
+      <div class="slide-inner">
+        <div class="header-group">
+          <span class="meta-headline-tag">// ROHITH_S.PORTFOLIO</span>
+          <h1 class="sculpture-title">ROHITH S</h1>
+          <p class="sculpture-subtitle">Offensive Security Engineer</p>
+          <div class="role-row">
+            <span>VAPT SPECIALIST</span>
+            <span class="divider">/</span>
+            <span>RED TEAMER</span>
+            <span class="divider">/</span>
+            <span>BUG BOUNTY HUNTER</span>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-arrow-hint">
+        <span class="hint-text">EXPLORE CHRONOLOGY</span>
+        <div class="hint-line"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 1: ABOUT (Generative Bio-System) -->
+    <section class="slide" id="slide-about" data-index="1">
+      <div class="slide-inner split-layout">
+        <div class="panel-left">
+          <span class="section-tag">// WHO_I_AM</span>
+          <h2 class="slide-heading">ABOUT<br/>ME</h2>
+          <p class="paragraph-text">
+            Security Engineer I at Terralogic, specializing in vulnerability assessment, penetration testing, and red team operations. I break things to make them stronger.
+          </p>
+          <p class="paragraph-text">
+            Active bug bounty hunter on YesWeHack and self-hosted programs. Recognized by NASA, UNESCO, Bentley, TCS, and Olark with 40+ Hall of Fame entries. I also run @HackWithRohit on YouTube, sharing real PoCs and security research with 5K+ subscribers.
+          </p>
+        </div>
+        <div class="panel-right">
+          <div class="glass-dossier-card">
+            <span class="card-meta">// KEY_METRICS</span>
+            <div class="archive-rows">
+              <div class="archive-row">
+                <span class="row-num">01</span>
+                <span class="row-text">40+ Halls of Fame</span>
+              </div>
+              <div class="archive-row">
+                <span class="row-num">02</span>
+                <span class="row-text">$20K+ Bounties Earned</span>
+              </div>
+              <div class="archive-row">
+                <span class="row-num">03</span>
+                <span class="row-text">5K+ YouTube Subscribers</span>
+              </div>
+              <div class="archive-row">
+                <span class="row-num">04</span>
+                <span class="row-text">3 Freelance Ops Delivered</span>
+              </div>
+              <div class="archive-row">
+                <span class="row-num">05</span>
+                <span class="row-text">500+ Companies Secured</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: SKILLS (Branching Synapses) -->
+    <section class="slide" id="slide-skills" data-index="2">
+      <div class="slide-inner">
+        <span class="section-tag">// SKILL_SET</span>
+        <h2 class="slide-heading">MY<br/>EXPERTISE</h2>
+        <p class="paragraph-text" style="max-width: 800px; margin-bottom: 40px;">
+          Offensive security across web, mobile, API, and AI layers — from manual code review to automated vulnerability discovery at scale.
+        </p>
+        
+        <div class="skills-flex-grid">
+          <div class="skill-category">
+            <span class="cat-num">01</span>
+            <div>
+              <h4>Web &amp; API Pentesting</h4>
+              <p>SQL Injection, SSRF, XSS, CSRF, IDOR, RCE, Authentication Bypass, Business Logic Flaws, Broken Access Control, Security Misconfiguration — OWASP Top 10.</p>
+            </div>
+          </div>
+          <div class="skill-category">
+            <span class="cat-num">02</span>
+            <div>
+              <h4>Android Security</h4>
+              <p>SSL Pinning Bypass, APK Reverse Engineering, Runtime Hooking, Insecure Data Storage, Binary Analysis, Improper Authentication — OWASP Mobile Top 10.</p>
+            </div>
+          </div>
+          <div class="skill-category">
+            <span class="cat-num">03</span>
+            <div>
+              <h4>AI &amp; LLM Security</h4>
+              <p>Prompt Injection, Guardrail Bypass, Training Data Extraction, Model Inversion, Insecure Output Handling, AI-Powered Pentest Automation — OWASP LLM Top 10.</p>
+            </div>
+          </div>
+          <div class="skill-category">
+            <span class="cat-num">04</span>
+            <div>
+              <h4>Bug Bounty &amp; Recon</h4>
+              <p>Vulnerability Chaining, Automated Reconnaissance, Subdomain Takeover, Exposed Secrets, Privilege Escalation — YesWeHack, Self-Hosted Programs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: PROJECTS (Active Protocols) -->
+    <section class="slide" id="slide-projects" data-index="3">
+      <div class="slide-inner">
+        <span class="section-tag">// SELECTED_WORK</span>
+        <h2 class="slide-heading">MY<br/>PROJECTS</h2>
+        
+        <div class="projects-flex-grid">
+          <div class="minimal-project-card">
+            <div class="card-header">
+              <span class="project-tag">AI AUTOMATION</span>
+              <span class="project-num">01 //</span>
+            </div>
+            <h3>AI Pentest Assistant</h3>
+            <p>LLM-powered agent that automates penetration testing workflows — recon, fuzzing, and vulnerability chaining.</p>
+          </div>
+          <div class="minimal-project-card">
+            <div class="card-header">
+              <span class="project-tag">RECON TOOLKIT</span>
+              <span class="project-num">02 //</span>
+            </div>
+            <h3>Easy-Bounty-Tool</h3>
+            <p>Automated multi-target scanning and reconnaissance toolkit built for live bug bounty hunting workflows.</p>
+          </div>
+          <div class="minimal-project-card">
+            <div class="card-header">
+              <span class="project-tag">FREELANCE OPS</span>
+              <span class="project-num">03 //</span>
+            </div>
+            <h3>Freelance Security Audits</h3>
+            <p>Delivered 3 freelance security engagements — E-Commerce ATO, Crypto Exchange XSS, Corporate OTP Bypass. 5.0 rating, 100% secured.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: FREELANCE VAPT (Completed Engagements & Client Value) -->
+    <section class="slide" id="slide-freelance" data-index="4">
+      <div class="slide-inner split-layout">
+        <div class="panel-left">
+          <span class="section-tag">// FREELANCE_VAPT_OPERATIONS</span>
+          <h2 class="slide-heading">FREELANCE<br/>AUDITS</h2>
+          <p class="paragraph-text">
+            Independent offensive engagements delivering deep VAPT. I provide non-destructive testing guarantees, zero downtime testing procedures, and full compliance reporting.
+          </p>
+          <div class="skills-card-container" style="margin-top: 20px;">
+            <div class="skill-category" style="padding: 16px 20px; gap: 16px;">
+              <span class="cat-num">A</span>
+              <div>
+                <h4 style="font-size: 0.95rem;">PGP-Encrypted Reporting</h4>
+                <p style="font-size: 0.8rem;">Every vulnerability report is encrypted and delivered securely using PGP protocols.</p>
+              </div>
+            </div>
+            <div class="skill-category" style="padding: 16px 20px; gap: 16px;">
+              <span class="cat-num">B</span>
+              <div>
+                <h4 style="font-size: 0.95rem;">Remediation &amp; Patch Support</h4>
+                <p style="font-size: 0.8rem;">Free re-testing is provided for all patches to guarantee absolute vulnerability resolution.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-right">
+          <div class="glass-dossier-card">
+            <span class="card-meta">// COMPLETED_ENGAGEMENTS</span>
+            <div class="archive-rows">
+              <div class="archive-row">
+                <span class="row-num">01</span>
+                <div>
+                  <span class="row-text" style="display: block; font-weight:600;">E-Commerce Platform</span>
+                  <span class="row-text" style="font-size:0.82rem; color:var(--text-secondary);">Identified and patched a critical Zero-Click Account Takeover flaw securing user PI.</span>
+                </div>
+              </div>
+              <div class="archive-row">
+                <span class="row-num">02</span>
+                <div>
+                  <span class="row-text" style="display: block; font-weight:600;">Crypto Exchange</span>
+                  <span class="row-text" style="font-size:0.82rem; color:var(--text-secondary);">Found Stored XSS leading to ATO, followed by a comprehensive Web3 mitigation audit.</span>
+                </div>
+              </div>
+              <div class="archive-row">
+                <span class="row-num">03</span>
+                <div>
+                  <span class="row-text" style="display: block; font-weight:600;">Corporate Enterprise</span>
+                  <span class="row-text" style="font-size:0.82rem; color:var(--text-secondary);">Bypassed authentication via OTP Bypass and executed remote code via File Upload exploit.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: EXPERIENCE (Chronological Audit Logs) -->
+    <section class="slide" id="slide-experience" data-index="5">
+      <div class="slide-inner">
+        <span class="section-tag">// CAREER_PATH</span>
+        <h2 class="slide-heading">MY<br/>EXPERIENCE</h2>
+        <p class="paragraph-text" style="margin-bottom: 30px;">
+          Leveraging 5+ years of active VAPT and bug bounty experience to uncover critical flaws before malicious actors do.
+        </p>
+        
+        <div class="timeline-asymmetric">
+          <div class="timeline-block">
+            <span class="timeline-date">2024 — PRESENT</span>
+            <div class="timeline-body">
+              <h4>Security Engineer I @ Terralogic</h4>
+              <p>Performing VAPT, API security audits, red team engagements, and AI security research across enterprise clients.</p>
+            </div>
+          </div>
+          <div class="timeline-block">
+            <span class="timeline-date">ONGOING</span>
+            <div class="timeline-body">
+              <h4>Bug Bounty Hunter @ YesWeHack</h4>
+              <p>Active hunter (handle: ROHIT_White_devil). Secured NASA, UNESCO, Bentley, TCS, Olark. 40+ HoFs, $20K+ earned across programs.</p>
+            </div>
+          </div>
+          <div class="timeline-block">
+            <span class="timeline-date">ONGOING</span>
+            <div class="timeline-body">
+              <h4>Content Creator @ YouTube</h4>
+              <p>Running @HackWithRohit — 5K+ subscribers. Publishing real PoCs, bug bounty methodologies, and security tool walkthroughs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: CONTACT (Establish Connection Link) -->
+    <section class="slide" id="slide-contact" data-index="6">
+      <div class="slide-inner contact-split">
+        <div class="contact-left">
+          <span class="section-tag">// REACH_OUT</span>
+          <h2 class="slide-heading">GET IN<br/>TOUCH</h2>
+          <p class="paragraph-text">
+            Interested in working together? Have a security engagement, collaboration, or just want to connect — drop me a message.
+          </p>
+        </div>
+        <div class="contact-right">
+          <form class="minimalist-contact-form" action="https://formspree.io/f/maqgpnop" method="POST">
+            <div class="form-row">
+              <div class="field-wrapper">
+                <label>YOUR NAME</label>
+                <input type="text" name="name" placeholder="Full Name" required />
+              </div>
+              <div class="field-wrapper">
+                <label>EMAIL</label>
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="field-wrapper">
+              <label>MESSAGE</label>
+              <textarea name="message" placeholder="Tell me about your project or engagement..." rows="4" required></textarea>
+            </div>
+            <button type="submit" class="transmit-button">SEND MESSAGE</button>
+          </form>
+          
+          <div class="social-badge-grid">
+            <a href="https://github.com/hack-with-rohit" target="_blank" rel="noopener" class="social-badge-link" aria-label="GitHub">
+              <svg class="social-icon-svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span class="badge-tooltip">GITHUB</span>
+            </a>
+            <a href="https://www.linkedin.com/in/rohith-s-0b9b2b267/" target="_blank" rel="noopener" class="social-badge-link" aria-label="LinkedIn">
+              <svg class="social-icon-svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span class="badge-tooltip">LINKEDIN</span>
+            </a>
+            <a href="https://youtube.com/@hackwithrohit2k" target="_blank" rel="noopener" class="social-badge-link" aria-label="YouTube">
+              <svg class="social-icon-svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+              <span class="badge-tooltip">YOUTUBE</span>
+            </a>
+            <a href="https://t.me/hackwithrohit" target="_blank" rel="noopener" class="social-badge-link" aria-label="Telegram">
+              <svg class="social-icon-svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              <span class="badge-tooltip">TELEGRAM</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <script src="scene.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
